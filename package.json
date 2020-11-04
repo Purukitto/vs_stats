@@ -1,0 +1,38 @@
+{
+    "name": "vsstats",
+    "displayName": "vsstats",
+    "description": "Track your coding stats and compare your progress with the global average",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:vsstats.checkStatus"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [{
+            "command": "vsstats.checkStatus",
+            "title": "Check Status | VSstats"
+        }]
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "node ./test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.50.0",
+        "@types/glob": "^7.1.3",
+        "@types/mocha": "^8.0.0",
+        "@types/node": "^12.11.7",
+        "eslint": "^7.9.0",
+        "glob": "^7.1.6",
+        "mocha": "^8.1.3",
+        "typescript": "^4.0.2",
+        "vscode-test": "^1.4.0"
+    }
+}
